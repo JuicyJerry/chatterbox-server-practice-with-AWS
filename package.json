@@ -1,0 +1,35 @@
+{
+  "name": "databases",
+  "version": "1.1.0",
+  "description": "Learn about databases",
+  "scripts": {
+    "start": "node ./server/app.js",
+    "precommit": "lint-staged",
+    "lint": "eslint ./",
+    "test": "mocha server/spec/server-spec.js --timeout 20000 --exit"
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "eslint",
+        "git add"
+      ]
+    }
+  },
+  "dependencies": {
+    "body-parser": "^1.9.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.10.1",
+    "morgan": "^1.4.1",
+    "mysql": "^2.18.1",
+    "request": "^2.69.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "colors": "^1.3.3",
+    "eslint": "^5.7.0",
+    "husky": "^1.0.1",
+    "lint-staged": "^7.3.0",
+    "mocha": "^6.2.1"
+  }
+}
